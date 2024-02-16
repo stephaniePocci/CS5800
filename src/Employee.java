@@ -1,5 +1,5 @@
 public class Employee {
-    private String[] fullName;
+    private final String[] fullName;
     private int socialSecurity;
 
     public Employee(int size, int social) { //Constructor
@@ -7,8 +7,9 @@ public class Employee {
         socialSecurity = social;
     }
 
-    public int getSocialSecurity() { //socialSecurity accessor
-        return socialSecurity;
+    public String getSocialSecurity() { //socialSecurity accessor
+        String socialSecurityString = String.valueOf(socialSecurity);
+        return socialSecurityString.substring(0, 3) + "-" + socialSecurityString.substring(3, 5) + "-" + socialSecurityString.substring(5);
     }
 
     public void setSocialSecurity(int newSocial) { //socialSecurity mutator
