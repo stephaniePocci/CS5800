@@ -1,4 +1,4 @@
-public class CargoShip extends Ship { // polymorphism
+public class CargoShip extends Ship {
     private int cargoCapacity;
 
     public CargoShip(String shipName, int yearBuilt, int newCargoCapacity) { // Constructor

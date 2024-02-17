@@ -1,10 +1,10 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Part2(args);
+        Part3();
     }
 
-    public static void Part1(String[] args) {
+    public static void Part1() {
         SalariedEmployee salariedEmployee1 = new SalariedEmployee(2, 111111111, 2500);
         HourlyEmployee hourlyEmployee1 = new HourlyEmployee(2, 222222222, 25, 32);
         HourlyEmployee hourlyEmployee2 = new HourlyEmployee(2, 333333333, 19, 47);
@@ -64,7 +64,7 @@ public class Main {
         }
         System.out.println();
     }
-    public static void Part2(String[] args) {
+    public static void Part2() {
         Ship[] ships = new Ship[3]; //static array
         Scanner scanner = new Scanner(System.in);
         String shipName = "";
@@ -115,5 +115,17 @@ public class Main {
             System.out.println("\n");
         }
         scanner.close();
+    }
+    public static void Part3() {
+        Instructor instructor = new Instructor("Nima", "Divarpanah", 3-2636);
+        Textbook textbook = new Textbook("Clean Code", "John Smith", "Ubisoft");
+        Course course = new Course("CS 5800", instructor, textbook);
+        course.printCourseInfo();
+        System.out.println("\n");
+
+        Instructor instructor2 = new Instructor("Stephanie", "Pocci", 502);
+        Textbook textbook2 = new Textbook("How to Crochet", "Jane Doe", "Nintendo");
+        Course course2 = new Course("Crochet 101", instructor2, textbook2);
+        course2.printCourseInfo();
     }
 }
