@@ -118,14 +118,10 @@ public class Main {
     }
     public static void Part3() {
         Instructor instructor = new Instructor("Nima", "Divarpanah", 3-2636);
-        Textbook textbook = new Textbook("Clean Code", "John Smith", "Ubisoft");
-        Course course = new Course("CS 5800", instructor, textbook);
-        course.printCourseInfo();
-        System.out.println("\n");
-
         Instructor instructor2 = new Instructor("Stephanie", "Pocci", 502);
-        Textbook textbook2 = new Textbook("How to Crochet", "Jane Doe", "Nintendo");
-        Course course2 = new Course("Crochet 101", instructor2, textbook2);
-        course2.printCourseInfo();
+        Textbook textbook = new Textbook("Clean Code", "John Smith", "Ubisoft");
+        Textbook textbook2 = new Textbook("How To Crochet", "Jane Doe", "Nintendo");
+        Course course = new Course("CS 5800", instructor, instructor2, textbook2, textbook);
+        course.printCourseInfo();
     }
 }
