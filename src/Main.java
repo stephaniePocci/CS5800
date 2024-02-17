@@ -1,7 +1,9 @@
 import java.util.Scanner;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Part3();
+        Part4();
     }
 
     public static void Part1() {
@@ -124,4 +126,103 @@ public class Main {
         Course course = new Course("CS 5800", instructor, instructor2, textbook2, textbook);
         course.printCourseInfo();
     }
+    public static void Part4() {
+
+        List<Folder> phpDemo1Folders = new java.util.ArrayList<>();
+        List<File> phpDemo1Files = new java.util.ArrayList<>();
+        Folder php_demo1 = new Folder("php_demo1", phpDemo1Folders, phpDemo1Files);
+
+        List<Folder> sourceFilesFolders = new java.util.ArrayList<>();
+        List<File> sourceFilesFiles = new java.util.ArrayList<>();
+        Folder source_files = new Folder("Source Files", sourceFilesFolders, sourceFilesFiles);
+
+        List<Folder> includePathFolders = new java.util.ArrayList<>();
+        List<File> includePathFiles = new java.util.ArrayList<>();
+        Folder include_path = new Folder("Include Path", includePathFolders, includePathFiles);
+
+        List<Folder> remoteFilesFolders = new java.util.ArrayList<>();
+        List<File> remoteFilesFiles = new java.util.ArrayList<>();
+        Folder remote_files = new Folder("Remote Files", remoteFilesFolders, remoteFilesFiles);
+
+        List<Folder> phalconFolders = new java.util.ArrayList<>();
+        List<File> phalconFiles = new java.util.ArrayList<>();
+        Folder phalcon = new Folder(".phalcon", phalconFolders, phalconFiles);
+
+        List<Folder> appFolders = new java.util.ArrayList<>();
+        List<File> appFiles = new java.util.ArrayList<>();
+        Folder app = new Folder("app", appFolders, appFiles);
+
+        List<Folder> cacheFolders = new java.util.ArrayList<>();
+        List<File> cacheFiles = new java.util.ArrayList<>();
+        Folder cache = new Folder("cache", cacheFolders, cacheFiles);
+
+        List<Folder> publicFolders = new java.util.ArrayList<>();
+        List<File> publicFiles = new java.util.ArrayList<>();
+        Folder publicFolderName = new Folder("public", publicFolders, publicFiles);
+
+        List<Folder> configFolders = new java.util.ArrayList<>();
+        List<File> configFiles = new java.util.ArrayList<>();
+        Folder config = new Folder("config", configFolders, configFiles);
+
+        List<Folder> controllersFolders = new java.util.ArrayList<>();
+        List<File> controllersFiles = new java.util.ArrayList<>();
+        Folder controllers = new Folder("controllers", controllersFolders, controllersFiles);
+
+        List<Folder> libraryFolders = new java.util.ArrayList<>();
+        List<File> libraryFiles = new java.util.ArrayList<>();
+        Folder library = new Folder("library", libraryFolders, libraryFiles);
+
+        List<Folder> migrationsFolders = new java.util.ArrayList<>();
+        List<File> migrationsFiles = new java.util.ArrayList<>();
+        Folder migrations = new Folder("migrations", migrationsFolders, migrationsFiles);
+
+        List<Folder> modelsFolders = new java.util.ArrayList<>();
+        List<File> modelsFiles = new java.util.ArrayList<>();
+        Folder models = new Folder("models", modelsFolders, modelsFiles);
+
+        List<Folder> viewsFolders = new java.util.ArrayList<>();
+        List<File> viewsFiles = new java.util.ArrayList<>();
+        Folder views = new Folder("views", viewsFolders, viewsFiles);
+
+        File htaccess = new File(".htaccess");
+
+        File htrouter = new File(".htrouter.php");
+
+        File index = new File("index.html");
+
+        phpDemo1Folders.add(source_files);
+        phpDemo1Folders.add(include_path);
+        phpDemo1Folders.add(remote_files);
+
+        sourceFilesFolders.add(phalcon);
+        sourceFilesFolders.add(app);
+        sourceFilesFolders.add(cache);
+        sourceFilesFolders.add(publicFolderName);
+
+        appFolders.add(config);
+        appFolders.add(controllers);
+        appFolders.add(library);
+        appFolders.add(migrations);
+        appFolders.add(models);
+        appFolders.add(views);
+
+        sourceFilesFiles.add(htaccess);
+        sourceFilesFiles.add(htrouter);
+        sourceFilesFiles.add(index);
+
+        php_demo1.printContents();
+        System.out.println("\n");
+
+        System.out.println("Removing app folder...");
+        sourceFilesFolders.removeIf(folder -> folder.getLocation().equals("app"));
+        php_demo1.printContents();
+        System.out.println("\n");
+
+        System.out.println("Removing public folder...");
+        sourceFilesFolders.removeIf(folder -> folder.getLocation().equals("public"));
+        php_demo1.printContents();
+    }
+
+
+
 }
