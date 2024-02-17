@@ -3,6 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        Part1();
+        Part2();
+        Part3();
         Part4();
     }
 
